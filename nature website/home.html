@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Nature Bytes</title>
+
+
+
+
+  <style>
+    /* Add some styling for the header */
+    header {
+      background-color: #008000;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Add some styling for the main content */
+    main {
+      padding: 20px;
+    }
+
+    /* Add some styling for the footer */
+    footer {
+      background-color: #008000;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+    .btn{
+        height:3.5rem;
+        width:15rem;
+        background:none;
+        outline:none;
+        border:.2rem solid var(--green);
+        color:var(--green);
+        font-size: 2rem;
+        margin:1rem 0;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 0;
+        position: relative;
+    }
+    .btn::before, .btn::after{
+        position: absolute;
+        content: '';
+        top:0; left:0;
+        height:100%;
+        width: 100%;
+        background:var(--green);
+        z-index: -1;
+        transition: all 0.5s cubic-bezier(.37,1.14,.26,1.24);
+    }
+    
+    .btn::before{
+        clip-path: polygon(0 0, 0 0, 0 0);
+    }
+    
+    .btn:hover:before{
+        clip-path: polygon(0 0, 0 100%, 100% 0);
+    }
+    
+    .btn::after{
+        clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+    }
+    
+    .btn:hover:after{
+        clip-path: polygon(100% 0%, 0% 100%, 100% 100%);
+    }
+    
+    .btn:hover{
+        color:#fff;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <!-- Add a header section -->
+  <header>
+    <h1>Nature Website</h1>
+    <p>Explore the beauty of nature</p>
+  </header>
+
+  <!-- Add a main content section -->
+  <main>
+    <h2>Introduction</h2>
+    <p>Nature Bytes is a web application that educates and informs users about environmental issues. It features four tabs - Home, Blogs, News, and Videos - that provide a unique and interactive experience. The Home tab provides an overview of the importance of environmental protection, the Blogs tab contains links to external websites with additional resources, the News tab displays the latest environmental news, and the Videos tab offers a custom video search functionality powered by the YouTube API.</p>
+    <h2>How we built it?</h2>
+    <p>Nature Bytes was built using HTML, CSS, and JavaScript. We utilized HTML for content structure, CSS for styling, and JavaScript for dynamic interactions and data retrieval. We also leveraged APIs to retrieve real-time news and video data.</p>
+
+    <h2>Importance of saving Environment</h2>
+    <ul>
+      <li>Biodiversity preservation: A diverse and thriving natural environment supports a wide range of species, helping to ensure their survival.</li>
+      <li>Climate regulation: The environment plays a critical role in regulating the Earth's climate, helping to mitigate the impacts of climate change.</li>
+      <li>Health benefits: A clean and healthy environment provides clean air, water, and food, reducing exposure to pollutants and reducing the risk of environmental diseases.</li>
+      <li>Economic benefits: A healthy environment supports a range of industries, including tourism, recreation, and fishing, providing economic benefits to communities.</li>
+      <li>
+        Sustainability: A clean and healthy environment supports sustainable development, allowing us to meet our needs without compromising the ability of future generations to do the same.
+      </li>
+      <li>
+        Natural resources protection: By preserving the environment, we can protect valuable natural resources, such as water, forests, and minerals, for future generations.
+      </li>
+        Cultural heritage: The environment is home to many important cultural sites and traditional ways of life, and preserving it helps to protect these cultural heritage and traditions.
+
+      <li>
+        Aesthetic value: The natural environment provides a source of beauty and inspiration, enhancing our quality of life.
+      </li>
+      <li>
+        Wild life habitat: The environment provides vital habitat for wildlife, helping to maintain healthy populations of animals and supporting the biodiversity of the planet.
+      </li>
+      <li>
+        Long-term stability: A healthy environment is essential for the long-term stability and resilience of the planet and its ecosystems, ensuring their ability to adapt and respond to changing conditions.
+      </li>
+    </ul>
+  </main>
+
+  <!-- Add a footer section -->
+  <footer>
+    <p><a href="https://youtu.be/TSukkXzPkwo" target="_blank" rel="noopener noreferrer"><button class="btn" >Explore</button></a>
+    </p>
+  </footer>
+</body>
+
+</html>
+
+
+
